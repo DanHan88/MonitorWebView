@@ -34,72 +34,48 @@ public class MainActivity extends AppCompatActivity {
             R.id.rack_info, //0
             R.id.node_info,
             R.id.onboarding,
-            R.id.switch_40,
-            R.id.Pc1_1,
-            R.id.Pc1_2,       //5
-            R.id.Pc1_3,
-            R.id.Pc1_4,
-            R.id.Pc1_5,
-            R.id.Pc1_6,
-            R.id.Pc1_7,   //10
-            R.id.Pc1_8,
             R.id.node_miner,
-            R.id.post_worker,
-            R.id.pc2_1,
-            R.id.pc2_2,   //15
-            R.id.pc2_3,
-            R.id.upscontroller,
             R.id.storage_1,
-            R.id.storage_2,
-            R.id.storage_3, //20
-            R.id.logo_zetacube
+            R.id.Pc2_1, //5
+            R.id.Pc2_2,
+            R.id.pc1_1,
+            R.id.pc1_2,
+            R.id.pc1_3,
+            R.id.pc1_4,  //10
+            R.id.upscontroller,
+            R.id.switch_40,
+            R.id.logo_zetacube //13
     );
     List<Integer> webViewIds = Arrays.asList(
             R.id.rack_info_web, //0
             R.id.node_info_web,
             R.id.onboarding_web,
-            R.id.switch_40_web,
-            R.id.Pc1_1_web,
-            R.id.Pc1_2_web,   //5
-            R.id.Pc1_3_web,
-            R.id.Pc1_4_web,
-            R.id.Pc1_5_web,
-            R.id.Pc1_6_web,
-            R.id.Pc1_7_web,  //10
-            R.id.Pc1_8_web,
             R.id.node_miner_web,
-            R.id.post_worker_web,
-            R.id.pc2_1_web,
-            R.id.pc2_2_web,  //15
-            R.id.pc2_3_web,
-            R.id.upscontroller_web,
             R.id.storage_1_web,
-            R.id.storage_2_web,
-            R.id.storage_3_web, //20
+            R.id.Pc2_1_web, //5
+            R.id.Pc2_2_web,
+            R.id.pc1_1_web,
+            R.id.pc1_2_web,
+            R.id.pc1_3_web,
+            R.id.pc1_4_web,  //10
+            R.id.upscontroller_web,
+            R.id.switch_40_web,
             R.id.logo_zetacube_web
     );
     List<String> webViewLinks = Arrays.asList(
             "http://121.138.145.75/monitor_rackInfo", //RackStatus
             "http://121.138.145.75/monitor_nodeInfo?minerId=f01695888",//Node INFO
             "http://121.138.145.75/monitor_boostInfo?minerId=f01695888", //Boost
-            "http://121.138.145.75/monitor_switchInfo", //Switch
+            "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.230:9100/metrics",//Miner
+            "http://121.138.145.75/monitor_storageInfo", // storage
+            "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.237:9100/metrics",// pc2
+            "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.248:9100/metrics",// pc2
             "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.231:9100/metrics",//PC1
             "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.232:9100/metrics",//PC1
             "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.236:9100/metrics",//PC1
             "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.237:9100/metrics",//PC1
-            "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.248:9100/metrics",//PC1
-            "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.249:9100/metrics",//PC1
-            "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.231:9100/metrics",//PC1
-            "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.232:9100/metrics",//PC1
-            "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.230:9100/metrics",//Miner
-            "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.236:9100/metrics",// PostWorker
-            "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.237:9100/metrics",// pc2
-            "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.248:9100/metrics",// pc2
-            "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.249:9100/metrics",// pc2
             "http://121.138.145.75/monitor_upsController", // ups
-            "http://121.138.145.75/monitor_storageInfo", // storage
-            "http://121.138.145.75/monitor_storageInfo", // storage
-            "http://121.138.145.75/monitor_storageInfo", // storage
+            "http://121.138.145.75/monitor_switchInfo", //Switch
             "http://121.138.145.75/monitor_homepage"   // homepage
     );
     List<Integer> buttonLayouts = Arrays.asList(
@@ -116,29 +92,13 @@ public class MainActivity extends AppCompatActivity {
             R.id.operations11,
             R.id.operations12,
             R.id.operations13,
-            R.id.operations14,
-            R.id.operations15,
-            R.id.operations16,
-            R.id.operations17,
-            R.id.operations18,
-            R.id.operations19,
-            R.id.operations20,
-            R.id.operations21,
-            R.id.operations22
+            R.id.operations14
     );
     List<Boolean> existHardWareButton = Arrays.asList(
             false,
             false,
             false,
             false,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
             true,
             true,
             true,
@@ -164,15 +124,7 @@ public class MainActivity extends AppCompatActivity {
             R.id.reboot11,
             R.id.reboot12,
             R.id.reboot13,
-            R.id.reboot14,
-            R.id.reboot15,
-            R.id.reboot16,
-            R.id.reboot17,
-            R.id.reboot18,
-            R.id.reboot19,
-            R.id.reboot20,
-            R.id.reboot21,
-            R.id.reboot22
+            R.id.reboot14
     );
     List<Integer> shutdownButtonsIds = Arrays.asList(
             R.id.shutdown1,
@@ -188,15 +140,7 @@ public class MainActivity extends AppCompatActivity {
             R.id.shutdown11,
             R.id.shutdown12,
             R.id.shutdown13,
-            R.id.shutdown14,
-            R.id.shutdown15,
-            R.id.shutdown16,
-            R.id.shutdown17,
-            R.id.shutdown18,
-            R.id.shutdown19,
-            R.id.shutdown20,
-            R.id.shutdown21,
-            R.id.shutdown22
+            R.id.shutdown14
     );
     List<Integer> imageViewsScrollLocation;
     int mainOpening = R.raw.door;
