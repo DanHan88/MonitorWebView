@@ -37,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="invisible">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -140,11 +141,11 @@
                app:layout_constraintTop_toTopOf="parent"></WebView>
 
            <ImageView
-               android:id="@+id/node_miner"
+               android:id="@+id/Pc2_1"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:contentDescription="@string/node_miner"
-               android:src="@drawable/node_miner"></ImageView>
+               android:contentDescription="@string/PC2_1"
+               android:src="@drawable/think_station_pc2"></ImageView>
            <LinearLayout
                android:id="@+id/operations4"
                android:layout_width="wrap_content"
@@ -163,21 +164,21 @@
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:contentDescription="@string/shutdown"
-                  android:src="@drawable/shut_down" />
+                  android:src="@drawable/shut_down"/>
            </LinearLayout>
 
            <WebView
-               android:id="@+id/node_miner_web"
+               android:id="@+id/Pc2_1_web"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                app:layout_constraintTop_toTopOf="parent"></WebView>
 
            <ImageView
-               android:id="@+id/storage_1"
+               android:id="@+id/node_miner_storage"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:contentDescription="@string/Storage1"
-               android:src="@drawable/storage" />
+               android:contentDescription="@string/node_miner"
+               android:src="@drawable/miner_storage"></ImageView>
            <LinearLayout
                android:id="@+id/operations5"
                android:layout_width="wrap_content"
@@ -200,17 +201,19 @@
            </LinearLayout>
 
            <WebView
-               android:id="@+id/storage_1_web"
+               android:id="@+id/node_miner_storage_web"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                app:layout_constraintTop_toTopOf="parent"></WebView>
 
+
+
            <ImageView
-               android:id="@+id/Pc2_1"
+               android:id="@+id/Pc2_2"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:contentDescription="@string/PC2_1"
-               android:src="@drawable/pc2"></ImageView>
+               android:contentDescription="@string/PC2_2"
+               android:src="@drawable/think_station_pc2"></ImageView>
            <LinearLayout
                android:id="@+id/operations6"
                android:layout_width="wrap_content"
@@ -229,21 +232,21 @@
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:contentDescription="@string/shutdown"
-                  android:src="@drawable/shut_down"/>
+                  android:src="@drawable/shut_down" />
            </LinearLayout>
-
            <WebView
-               android:id="@+id/Pc2_1_web"
+               android:id="@+id/Pc2_2_web"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                app:layout_constraintTop_toTopOf="parent"></WebView>
 
            <ImageView
-               android:id="@+id/Pc2_2"
+               android:id="@+id/pc1_1"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:contentDescription="@string/PC2_2"
-               android:src="@drawable/pc2"></ImageView>
+               android:contentDescription="@string/PC1_1"
+               android:src="@drawable/think_station_pc1"/>
+
            <LinearLayout
                android:id="@+id/operations7"
                android:layout_width="wrap_content"
@@ -264,19 +267,19 @@
                   android:contentDescription="@string/shutdown"
                   android:src="@drawable/shut_down" />
            </LinearLayout>
+
            <WebView
-               android:id="@+id/Pc2_2_web"
+               android:id="@+id/pc1_1_web"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                app:layout_constraintTop_toTopOf="parent"></WebView>
 
            <ImageView
-               android:id="@+id/pc1_1"
+               android:id="@+id/pc1_2"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:contentDescription="@string/PC1_1"
-               android:src="@drawable/pc2"/>
-
+               android:contentDescription="@string/PC1_2"
+               android:src="@drawable/think_station_pc1" />
            <LinearLayout
                android:id="@+id/operations8"
                android:layout_width="wrap_content"
@@ -298,18 +301,18 @@
                   android:src="@drawable/shut_down" />
            </LinearLayout>
 
-           <WebView
-               android:id="@+id/pc1_1_web"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               app:layout_constraintTop_toTopOf="parent"></WebView>
+               <WebView
+                   android:id="@+id/pc1_2_web"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   app:layout_constraintTop_toTopOf="parent"></WebView>
 
            <ImageView
-               android:id="@+id/pc1_2"
+               android:id="@+id/pc1_3"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:contentDescription="@string/PC1_2"
-               android:src="@drawable/pc2" />
+               android:contentDescription="@string/PC1_3"
+               android:src="@drawable/think_station_pc1" />
            <LinearLayout
                android:id="@+id/operations9"
                android:layout_width="wrap_content"
@@ -332,17 +335,17 @@
            </LinearLayout>
 
                <WebView
-                   android:id="@+id/pc1_2_web"
+                   android:id="@+id/pc1_3_web"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    app:layout_constraintTop_toTopOf="parent"></WebView>
 
            <ImageView
-               android:id="@+id/pc1_3"
+               android:id="@+id/pc1_4"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:contentDescription="@string/PC1_3"
-               android:src="@drawable/pc2" />
+               android:contentDescription="@string/PC1_4"
+               android:src="@drawable/think_station_pc1" />
            <LinearLayout
                android:id="@+id/operations10"
                android:layout_width="wrap_content"
@@ -364,39 +367,6 @@
                   android:src="@drawable/shut_down" />
            </LinearLayout>
 
-               <WebView
-                   android:id="@+id/pc1_3_web"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   app:layout_constraintTop_toTopOf="parent"></WebView>
-
-           <ImageView
-               android:id="@+id/pc1_4"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:contentDescription="@string/PC1_4"
-               android:src="@drawable/pc2" />
-           <LinearLayout
-               android:id="@+id/operations11"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:orientation="horizontal"
-               android:background="#09162A">
-              <ImageView
-                  android:id="@+id/reboot11"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:contentDescription="@string/reboot"
-                  android:src="@drawable/reboot" />
-
-              <ImageView
-                  android:id="@+id/shutdown11"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:contentDescription="@string/shutdown"
-                  android:src="@drawable/shut_down" />
-           </LinearLayout>
-
            <WebView
                android:id="@+id/pc1_4_web"
                android:layout_width="wrap_content"
@@ -411,20 +381,20 @@
                android:src="@drawable/upscontroller" />
 
        <LinearLayout
-           android:id="@+id/operations12"
+           android:id="@+id/operations11"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:orientation="horizontal"
            android:background="#09162A">
           <ImageView
-              android:id="@+id/reboot12"
+              android:id="@+id/reboot11"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:contentDescription="@string/reboot"
               android:src="@drawable/reboot" />
 
           <ImageView
-              android:id="@+id/shutdown12"
+              android:id="@+id/shutdown11"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:contentDescription="@string/shutdown"
@@ -445,20 +415,20 @@
                android:src="@drawable/switch_40" />
 
            <LinearLayout
-               android:id="@+id/operations13"
+               android:id="@+id/operations12"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:orientation="horizontal"
                android:background="#09162A">
               <ImageView
-                  android:id="@+id/reboot13"
+                  android:id="@+id/reboot12"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:contentDescription="@string/reboot"
                   android:src="@drawable/reboot" />
 
               <ImageView
-                  android:id="@+id/shutdown13"
+                  android:id="@+id/shutdown12"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:contentDescription="@string/shutdown"
@@ -470,35 +440,6 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                app:layout_constraintTop_toTopOf="parent"></WebView>
-
-
-
-           <ImageView
-               android:id="@+id/logo_zetacube"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:contentDescription="@string/logo_zetacube"
-               android:src="@drawable/logo_zetacube" />
-           <LinearLayout
-               android:id="@+id/operations14"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:orientation="horizontal"
-               android:background="#09162A">
-              <ImageView
-                  android:id="@+id/reboot14"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:contentDescription="@string/reboot"
-                  android:src="@drawable/reboot" />
-
-              <ImageView
-                  android:id="@+id/shutdown14"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:contentDescription="@string/shutdown"
-                  android:src="@drawable/shut_down" />
-           </LinearLayout>
 
            <WebView
                android:id="@+id/logo_zetacube_web"

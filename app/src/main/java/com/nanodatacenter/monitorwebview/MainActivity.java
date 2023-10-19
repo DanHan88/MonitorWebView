@@ -31,38 +31,37 @@ public class MainActivity extends AppCompatActivity {
     RelativeLayout progressBar;
     private MediaPlayer mediaPlayer;
     List<Integer> imageViewIds = Arrays.asList(
+            R.id.onse_media, //0
             R.id.rack_info, //0
             R.id.node_info,
             R.id.onboarding,
-            R.id.node_miner,
-            R.id.storage_1,
-            R.id.Pc2_1, //5
+            R.id.Pc2_1,
+            R.id.node_miner_storage,//5
             R.id.Pc2_2,
             R.id.pc1_1,
             R.id.pc1_2,
             R.id.pc1_3,
             R.id.pc1_4,  //10
             R.id.upscontroller,
-            R.id.switch_40,
-            R.id.logo_zetacube //13
+            R.id.switch_40
     );
     List<Integer> webViewIds = Arrays.asList(
+            R.id.onse_media_web,
             R.id.rack_info_web, //0
             R.id.node_info_web,
             R.id.onboarding_web,
-            R.id.node_miner_web,
-            R.id.storage_1_web,
-            R.id.Pc2_1_web, //5
+            R.id.Pc2_1_web,
+            R.id.node_miner_storage_web,//5
             R.id.Pc2_2_web,
             R.id.pc1_1_web,
             R.id.pc1_2_web,
             R.id.pc1_3_web,
             R.id.pc1_4_web,  //10
             R.id.upscontroller_web,
-            R.id.switch_40_web,
-            R.id.logo_zetacube_web
+            R.id.switch_40_web
     );
     List<String> webViewLinks = Arrays.asList(
+            "https://www.onsemedia.com/",
             "http://121.138.145.75/monitor_rackInfo", //RackStatus
             "http://121.138.145.75/monitor_nodeInfo?minerId=f01695888",//Node INFO
             "http://121.138.145.75/monitor_boostInfo?minerId=f01695888", //Boost
@@ -75,10 +74,10 @@ public class MainActivity extends AppCompatActivity {
             "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.236:9100/metrics",//PC1
             "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.237:9100/metrics",//PC1
             "http://121.138.145.75/monitor_upsController", // ups
-            "http://121.138.145.75/monitor_switchInfo", //Switch
-            "http://121.138.145.75/monitor_homepage"   // homepage
+            "http://121.138.145.75/monitor_switchInfo" //Switch
     );
     List<Integer> buttonLayouts = Arrays.asList(
+            R.id.operations0,
             R.id.operations1,
             R.id.operations2,
             R.id.operations3,
@@ -90,15 +89,14 @@ public class MainActivity extends AppCompatActivity {
             R.id.operations9,
             R.id.operations10,
             R.id.operations11,
-            R.id.operations12,
-            R.id.operations13,
-            R.id.operations14
+            R.id.operations12
     );
     List<Boolean> existHardWareButton = Arrays.asList(
             false,
             false,
             false,
             false,
+            false,
             true,
             true,
             true,
@@ -106,11 +104,10 @@ public class MainActivity extends AppCompatActivity {
             true,
             true,
             true,
-            true,
-            true,
-            false
+            true
     );
     List<Integer> rebootButtonsIds = Arrays.asList(
+            R.id.reboot0,
             R.id.reboot1,
             R.id.reboot2,
             R.id.reboot3,
@@ -122,11 +119,10 @@ public class MainActivity extends AppCompatActivity {
             R.id.reboot9,
             R.id.reboot10,
             R.id.reboot11,
-            R.id.reboot12,
-            R.id.reboot13,
-            R.id.reboot14
+            R.id.reboot12
     );
     List<Integer> shutdownButtonsIds = Arrays.asList(
+            R.id.shutdown0,
             R.id.shutdown1,
             R.id.shutdown2,
             R.id.shutdown3,
@@ -138,9 +134,7 @@ public class MainActivity extends AppCompatActivity {
             R.id.shutdown9,
             R.id.shutdown10,
             R.id.shutdown11,
-            R.id.shutdown12,
-            R.id.shutdown13,
-            R.id.shutdown14
+            R.id.shutdown12
     );
     List<Integer> imageViewsScrollLocation;
     int mainOpening = R.raw.door;
@@ -174,6 +168,7 @@ public class MainActivity extends AppCompatActivity {
         webViews = new ArrayList<>();
         imageViewsScrollLocation = new ArrayList<>();
         serverButtonsInitializing();
+        webViewMapInit();
         webViewInitializing();
         imageViewInitializing();
     }
@@ -183,6 +178,12 @@ public class MainActivity extends AppCompatActivity {
         }
         mediaPlayer = MediaPlayer.create(this, soundResId);
         mediaPlayer.start();
+    }
+    public void webViewMapInit(){
+        WebView webView = findViewById(R.id.logo_zetacube_web);
+        WebSettings settings = webView.getSettings();
+        settings.setDomStorageEnabled(true);
+        webView.loadUrl("http://121.138.145.75/nanodc_map");
     }
     public void webViewInitializing(){
         for(int i =0;i<webViewIds.size();i++){
