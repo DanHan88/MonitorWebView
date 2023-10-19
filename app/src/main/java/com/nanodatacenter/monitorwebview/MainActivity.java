@@ -43,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
             R.id.pc1_3,
             R.id.pc1_4,  //10
             R.id.upscontroller,
-            R.id.switch_40
+            R.id.switch_40,
+            R.id.logo_zetacube
     );
     List<Integer> webViewIds = Arrays.asList(
             R.id.onse_media_web,
@@ -58,7 +59,8 @@ public class MainActivity extends AppCompatActivity {
             R.id.pc1_3_web,
             R.id.pc1_4_web,  //10
             R.id.upscontroller_web,
-            R.id.switch_40_web
+            R.id.switch_40_web,
+            R.id.logo_zetacube_web
     );
     List<String> webViewLinks = Arrays.asList(
             "https://www.onsemedia.com/",
@@ -68,13 +70,13 @@ public class MainActivity extends AppCompatActivity {
             "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.230:9100/metrics",//Miner
             "http://121.138.145.75/monitor_storageInfo", // storage
             "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.237:9100/metrics",// pc2
-            "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.248:9100/metrics",// pc2
             "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.231:9100/metrics",//PC1
             "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.232:9100/metrics",//PC1
             "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.236:9100/metrics",//PC1
             "http://121.138.145.75/monitor_hardwareInfo?minerId=f01695888&source_link=121.178.82.237:9100/metrics",//PC1
             "http://121.138.145.75/monitor_upsController", // ups
-            "http://121.138.145.75/monitor_switchInfo" //Switch
+            "http://121.138.145.75/monitor_switchInfo",//Switch
+            "http://121.138.145.75/nanodc_map"
     );
     List<Integer> buttonLayouts = Arrays.asList(
             R.id.operations0,
@@ -89,7 +91,8 @@ public class MainActivity extends AppCompatActivity {
             R.id.operations9,
             R.id.operations10,
             R.id.operations11,
-            R.id.operations12
+            R.id.operations12,
+            R.id.operations13
     );
     List<Boolean> existHardWareButton = Arrays.asList(
             false,
@@ -104,7 +107,8 @@ public class MainActivity extends AppCompatActivity {
             true,
             true,
             true,
-            true
+            true,
+            false
     );
     List<Integer> rebootButtonsIds = Arrays.asList(
             R.id.reboot0,
@@ -119,7 +123,8 @@ public class MainActivity extends AppCompatActivity {
             R.id.reboot9,
             R.id.reboot10,
             R.id.reboot11,
-            R.id.reboot12
+            R.id.reboot12,
+            R.id.reboot13
     );
     List<Integer> shutdownButtonsIds = Arrays.asList(
             R.id.shutdown0,
@@ -134,7 +139,8 @@ public class MainActivity extends AppCompatActivity {
             R.id.shutdown9,
             R.id.shutdown10,
             R.id.shutdown11,
-            R.id.shutdown12
+            R.id.shutdown12,
+            R.id.shutdown13
     );
     List<Integer> imageViewsScrollLocation;
     int mainOpening = R.raw.door;
@@ -168,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
         webViews = new ArrayList<>();
         imageViewsScrollLocation = new ArrayList<>();
         serverButtonsInitializing();
-        webViewMapInit();
+       // webViewMapInit();
         webViewInitializing();
         imageViewInitializing();
     }
@@ -363,7 +369,7 @@ public class MainActivity extends AppCompatActivity {
             AnimatorSet animatorSet = new AnimatorSet();
             animatorSet.play(webViewAnimator);
             animatorSet.playTogether(webViewAnimator, scrollViewAnimator);
-            animatorSet.setDuration(200);
+            animatorSet.setDuration(800);
             animatorSet.start();
         }
     }
